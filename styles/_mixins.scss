@@ -1,0 +1,51 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin between {
+  justify-content: space-between;
+}
+
+@mixin center {
+  justify-content: center;
+}
+
+@mixin fstart {
+  align-items: flex-start;
+}
+
+@mixin circular {
+  font-family: "Circular Std", sans-serif;
+}
+
+@mixin l-green-bg {
+  background-color: rgba(0, 255, 133, 0.08);
+}
+
+@mixin hundred-width {
+  width: 100%;
+}
+
+@mixin p-b {
+  padding: 25px;
+  border-radius: 50px;
+}
+
+@mixin main-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: luminosity;
+}
+
+@mixin abso {
+  position: absolute;
+}
+
+@mixin pad-zero {
+  padding: 0;
+}
+
+@mixin mar-zero {
+  margin: 0;
+}

@@ -1,0 +1,102 @@
+@use "variables" as lock;
+@use "mixins" as mix;
+
+.three {
+  @include mix.l-green-bg;
+
+  .three-wrapper {
+    margin: 0 auto;
+    max-width: 780px;
+    @include mix.hundred-width;
+    display: grid;
+    grid-template-areas:
+      "title title title"
+      "card1 card2 card3";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20% 80%;
+    gap: 40px;
+    padding: 50px 0 140px 0;
+
+    .three-title {
+      grid-area: title;
+
+      h2 {
+        @include mix.circular;
+        font-size: lock.$f-size-large;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    .three-card {
+      @include mix.flex;
+      flex-direction: column;
+
+      .three-card-img {
+        @include mix.flex;
+        @include mix.center;
+        flex-basis: 50%;
+
+        .bg {
+          @include mix.p-b;
+        }
+
+        .bg-blue {
+          background-color: lock.$light-blue;
+        }
+
+        .bg-green {
+          background-color: lock.$light-green;
+        }
+      }
+
+      .three-card-content {
+        p {
+          margin-top: 24px;
+          text-align: center;
+          @include mix.circular;
+        }
+      }
+
+      .three-one {
+        grid-area: card1;
+      }
+
+      .three-two {
+        grid-area: card2;
+      }
+
+      .three-three {
+        grid-area: card3;
+      }
+    }
+  }
+}
+
+@media (max-width: 899px) {
+  .three {
+    .three-wrapper {
+      grid-template-areas:
+        "title"
+        "card1"
+        "card2"
+        "card3";
+      grid-template-columns: 1fr ;
+      grid-template-rows: 10% repeat(3, 1fr);
+      padding-bottom: 50px;
+      gap: 10px;
+
+
+      .three-card {
+        .three-card-content {
+          @include mix.flex;
+          @include mix.center;
+          
+          p {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

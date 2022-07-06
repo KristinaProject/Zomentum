@@ -1,0 +1,120 @@
+@use "variables" as lock;
+@use "mixins" as mix;
+
+.hero {
+  @include mix.flex;
+  padding: 115px 325px 170px 325px;
+  background: lock.$bblue;
+  position: relative;
+  overflow: hidden;
+
+  .bg-img {
+    @include mix.abso;
+    mix-blend-mode: luminosity;
+  }
+
+  .bg-one {
+    bottom: 15px;
+    left: 135px;
+  }
+
+  .bg-two {
+    bottom: 60px;
+    right: 70px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  }
+
+  .hero-wrapper {
+    @include mix.flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: lock.$white;
+    z-index: 2;
+
+    h1 {
+      font-size: lock.$f-size-sl;
+      font-weight: lock.$f-weight-seven;
+      @include mix.circular;
+    }
+
+    p {
+      font-weight: lock.$f-weight-four;
+      font-size: lock.$f-size-s;
+      padding: 0 10px;
+      @include mix.circular;
+      line-height: 30px;
+    }
+
+    button {
+      padding: 16px 25px;
+      background-color: lock.$black;
+      color: lock.$white;
+      @include mix.circular;
+      font-size: lock.$f-size-s;
+      font-weight: lock.$f-weight-seven;
+      letter-spacing: lock.$lt-spacing-xs;
+      cursor: pointer;
+      margin-top: 35px;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .hero {
+    padding: 50px 100px 170px 100px;
+
+    .bg-two {
+      bottom: 35px;
+      right: 45px;
+    }
+  }
+}
+
+@media (max-width: 899px) {
+  .hero {
+    .bg-one {
+      bottom: 15px;
+      left: 65px;
+    }
+
+    .bg-two {
+      bottom: 12px;
+      right: 15px;
+    }
+
+    h1 {
+      font-size: lock.$f-size-large !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    .bg-two {
+      bottom: 0;
+      right: -10px;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+    button {
+      margin-top: 25px !important;
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  .hero {
+    .bg-one {
+      bottom: 0;
+      left: 10px;
+    }
+
+    .bg-two {
+      bottom: -10px;
+      right: -15px;
+    }
+  }
+}

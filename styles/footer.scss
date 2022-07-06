@@ -1,0 +1,107 @@
+@use "variables" as lock;
+@use "mixins" as mix;
+
+.footer-wrapper {
+  @include mix.flex;
+  flex-direction: column;
+  background-color: lock.$black;
+  padding: 90px 0px 60px 220px;
+
+  .list-wrapper {
+    @include mix.flex;
+    @include mix.hundred-width;
+    @include mix.fstart;
+
+    ul {
+      @include mix.flex;
+      flex-direction: column;
+      flex-basis: 20%;
+      @include mix.pad-zero;
+      @include mix.mar-zero;
+      @include mix.fstart;
+
+      li {
+        @include mix.flex;
+
+        span {
+          color: lock.$white;
+          font-size: lock.$f-size-s;
+          font-weight: lock.$f-weight-seven;
+          margin-bottom: 24px;
+        }
+
+        a {
+          color: lock.$white;
+          font-size: lock.$f-size-xs;
+          font-weight: lock.$f-weight-four;
+          line-height: 18px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    color: lock.$white;
+    margin-top: 57px;
+    font-size: lock.$f-size-xs;
+    font-weight: lock.$f-weight-four;
+    @include mix.circular;
+    @include mix.hundred-width;
+    @include mix.flex;
+    @include mix.fstart;
+
+    span {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (max-width: 1099px) {
+  .footer-wrapper {
+    padding: 90px 0px 60px 120px !important;
+
+    .list-wrapper {
+      flex-wrap: wrap;
+      row-gap: 40px;
+
+      ul {
+        flex-basis: 33.33% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 839px) {
+  .footer-wrapper {
+    .list-wrapper {
+      ul {
+        flex-basis: 50% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 699px) {
+  .footer-wrapper {
+    .bottom {
+      flex-direction: column;
+      
+      span {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .footer-wrapper{
+    padding: 90px 0 60px 100px !important;
+
+    .list-wrapper {
+      ul {
+        flex-basis: 100% !important;
+      }
+    }
+  }
+}

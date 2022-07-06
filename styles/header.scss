@@ -1,0 +1,55 @@
+@use "variables" as lock;
+@use "mixins" as mix;
+
+header {
+  @include mix.flex;
+  @include mix.between;
+  padding: 30px 29px 20px 80px;
+
+  .nav-bar {
+    flex-basis: 50%;
+
+    ul {
+      @include mix.flex;
+      @include mix.between;
+
+      li {
+        a {
+          color: lock.$header-t-color;
+          @include mix.flex;
+          font-weight: lock.$f-weight-five;
+
+          img {
+            margin-right: 4px;
+          }
+        }
+
+        button {
+          border: 1px solid lock.$bblue;
+          color: lock.$bblue;
+          padding: 12px 23px;
+          background-color: lock.$white;
+          font-weight: lock.$f-weight-five;
+          @include mix.circular;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  header {
+    .nav-bar {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      font-size: 44px;
+    }
+  }
+}

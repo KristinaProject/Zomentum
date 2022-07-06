@@ -1,0 +1,44 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 29px 20px 80px;
+}
+header .nav-bar {
+  flex-basis: 50%;
+}
+header .nav-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .nav-bar ul li a {
+  color: #000c2d;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+header .nav-bar ul li a img {
+  margin-right: 4px;
+}
+header .nav-bar ul li button {
+  border: 1px solid #2f70fe;
+  color: #2f70fe;
+  padding: 12px 23px;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-family: "Circular Std", sans-serif;
+}
+header .hamburger {
+  display: none;
+}
+
+@media (max-width: 1279px) {
+  header .nav-bar {
+    display: none;
+  }
+  header .hamburger {
+    display: block;
+    font-size: 44px;
+  }
+}/*# sourceMappingURL=header.css.map */

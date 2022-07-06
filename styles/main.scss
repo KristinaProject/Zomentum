@@ -1,0 +1,33 @@
+@use "variables" as lock;
+@use "mixins" as mix;
+
+body * {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1440px;
+  @include mix.hundred-width;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  @include mix.circular;
+  li {
+    a {
+      text-decoration: none;
+      font-size: lock.$f-size-xs;
+      letter-spacing: lock.$lt-spacing-small;
+    }
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+button:hover {
+  transform: scale(1.1);
+}

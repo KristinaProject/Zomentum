@@ -1,0 +1,28 @@
+body * {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  font-family: "Circular Std", sans-serif;
+}
+ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=main.css.map */
