@@ -1,0 +1,69 @@
+@use "variables" as lock;
+@use "mixins" as mix;
+
+header {
+  @include mix.flex;
+  @include mix.between;
+  padding: 0 29px 0 80px;
+
+  .nav-bar {
+    flex-basis: 50%;
+
+    ul {
+      @include mix.flex;
+      @include mix.between;
+
+      li {
+        a {
+          color: lock.$header-t-color;
+          @include mix.flex;
+          font-weight: lock.$f-weight-five;
+
+          img {
+            margin-right: 4px;
+          }
+        }
+
+        .nav-bar-get,
+        .nav-bar-login {
+          background-color: lock.$white;
+          font-weight: lock.$f-weight-five;
+          @include mix.circular;
+        }
+
+        .nav-bar-get {
+          border: 1px solid lock.$bblue;
+          color: lock.$bblue;
+          padding: 12px 23px;
+        }
+
+        .nav-bar-login {
+          @include mix.flex;
+          border: none;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  header {
+    padding: 10px;
+
+    .nav-bar {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      font-size: 44px;
+      background-color: lock.$white;
+      border: none;
+    }
+  }
+}

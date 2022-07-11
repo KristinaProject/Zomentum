@@ -1,12 +1,19 @@
 @use "variables" as lock;
 @use "mixins" as mix;
+@import "header";
+@import "hero";
+@import "subhero";
+@import "main-section-style";
+@import "footer";
 
 body * {
   box-sizing: border-box;
+  transition: 0.25s ease;
 }
 
 .wrapper {
   max-width: 1440px;
+  min-width: 450px;
   @include mix.hundred-width;
   margin: 0 auto;
 }
@@ -30,4 +37,5 @@ a:hover {
 
 button:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }

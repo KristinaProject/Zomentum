@@ -1,0 +1,114 @@
+@use "variables" as lock;
+@use "mixins" as mix;
+
+.main__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  padding: 120px 200px 120px 200px;
+  gap: 50px;
+
+  &-content {
+    max-width: 400px;
+    min-width: 200px;
+    @include mix.hundred-width;
+    @include mix.flex;
+    @include mix.center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    &-title {
+      padding-right: 30px;
+
+      h3 {
+        font-size: lock.$f-size-m;
+        font-weight: lock.$f-weight-seven;
+        color: lock.$main-title;
+        @include mix.circular;
+        margin-top: 0;
+      }
+    }
+
+    &-description {
+      p {
+        @include mix.circular;
+        font-size: lock.$f-size-s;
+        font-weight: lock.$f-weight-four;
+        color: lock.$main-p;
+        line-height: 1.5;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      @include mix.flex;
+      padding: 0;
+
+      span {
+        color: lock.$bblue;
+        font-size: lock.$f-size-s;
+        @include mix.circular;
+        margin-right: 8px;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &-img {
+      display: none;
+    }
+  }
+
+  &-img {
+    @include mix.flex;
+    @include mix.center;
+  }
+}
+
+@media (max-width: 1280px) {
+  .main__wrapper {
+    padding: 120px 150px 120px 150px !important;
+    row-gap: 100px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main__wrapper {
+    padding: 120px 100px 120px 100px !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .main__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+
+    &-content {
+      position: relative;
+
+      &-img {
+        display: block;
+        position: absolute;
+        opacity: 0.6;
+        right: -300px;
+        z-index: -1;
+      }
+    }
+    
+    &-img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .main__wrapper-content-img {
+    opacity: 0.4;
+    right: -120px;
+  }
+}

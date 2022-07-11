@@ -40,28 +40,31 @@
             <li>
               <a href="#"><span>Blog</span> </a>
             </li>
-            <li><button>Get a demo</button></li>
+            <li><button class="nav-bar-get">Get a demo</button></li>
             <li>
-              <a href="#">
+              <button class="nav-bar-login">
                 <div><img src="./images/person.svg" alt="person" /></div>
                 <span>Login</span>
-              </a>
+              </button>
             </li>
           </ul>
         </div>
-        <div class="hamburger">
+        <button class="hamburger">
           <i class="fa fa-bars"></i>
-        </div>
+        </button>
       </header>
       <main>
         <div class="hero">
-          <div class="bg-img bg-one">
-            <img src="./images/Frame.png" alt="bgimg">
+          <div class="hero__bg hero__bg-left">
+            <img src="./images/Frame.png" alt="co-workers" />
           </div>
-          <div class="bg-img bg-two">
-            <img src="./images/Partner.png" alt="bgimg2">
+          <div class="hero__bg hero__bg-right">
+            <img
+              src="./images/Partner.png"
+              alt="person climbing for good result"
+            />
           </div>
-          <div class="hero-wrapper">
+          <div class="hero__wrapper">
             <h1>Find the right partners to fuel your business growth</h1>
             <p>
               Join a vibrant community of MSPs to forge long-lasting
@@ -72,70 +75,84 @@
           </div>
         </div>
 
-        <section class="three">
-          <div class="three-wrapper">
-            <div class="three-title">
+        <section class="subhero">
+          <div class="subhero__wrapper">
+            <div class="subhero__wrapper-title">
               <h2>List. Sell. Grow.</h2>
             </div>
-            <div class="three-card three-one">
-              <div class="three-card-img">
-                <div class="bg bg-blue">
+            <div class="subhero__wrapper-card">
+              <div class="subhero__wrapper-card-img">
+                <div
+                  class="subhero__wrapper-card-img-bg subhero__wrapper-card-img-bg-blue"
+                >
                   <img src="./images/Frame(1).png" alt="list" />
                 </div>
               </div>
-              <div class="three-card-content">
+              <div class="subhero__wrapper-card-content">
                 <p>Be a part of the only All-In-One platform for IT services</p>
               </div>
             </div>
-            <div class="three-card three-two">
-              <div class="three-card-img">
-                <div class="bg bg-green">
+            <div class="subhero__wrapper-card">
+              <div class="subhero__wraper-card-img">
+                <div
+                  class="subhero__wrapper-card-img-bg subhero__wrapper-card-img-bg-green"
+                >
                   <img src="./images/Frame(2).png" alt="search" />
                 </div>
               </div>
-              <div class="three-card-content">
+              <div class="subhero__wrapper-card-content">
                 <p>Come closer to finding your next custumer</p>
               </div>
             </div>
-            <div class="three-card three-three">
-              <div class="three-card-img">
-                <div class="bg bg-blue">
+            <div class="subhero__wrapper-card">
+              <div class="subhero__wrapper-card-img">
+                <div
+                  class="subhero__wrapper-card-img-bg subhero__wrapper-card-img-bg-blue"
+                >
                   <img src="./images/Group(1).png" alt="grow" />
                 </div>
               </div>
-              <div class="three-card-content">
+              <div class="subhero__wrapper-card-content">
                 <p>Grow your buciness with a single click</p>
               </div>
             </div>
           </div>
         </section>
 
-        <div class="wrapper-main">
-          <div class="main-content main-one">
-            <div class="main-title">
+        <div class="main__wrapper">
+          <div class="main__wrapper-content">
+            <div class="main__wrapper-content-title">
               <h3>Your channel program on steroids</h3>
             </div>
-            <div class="main-description">
+            <div class="main__wrapper-content-description">
               <p>
                 Tired of finding MSPs that can help you boost your channel
                 sales? You’re in luck, because they’re all here.
               </p>
             </div>
+            <img
+              class="main__wrapper-content-img"
+              src="./images/Your.png"
+              alt="search good boost channel"
+            />
           </div>
 
-          <div class="main-img img-one">
-            <img src="./images/Your.png" alt="channel" />
+          <div class="main__wrapper-img">
+            <img src="./images/Your.png" alt="search good boost channel" />
           </div>
 
-          <div class="main-img img-two">
-            <img src="./images/Become.svg" alt="vendor" />
+          <div class="main__wrapper-img">
+            <img
+              src="./images/Become.svg"
+              alt="Become the vendor everyone wants to buy from"
+            />
           </div>
 
-          <div class="main-content main-two">
-            <div class="main-title">
+          <div class="main__wrapper-content">
+            <div class="main__wrapper-content-title">
               <h3>Become the vendor everyone wants to buy from</h3>
             </div>
-            <div class="main-description">
+            <div class="main__wrapper-content-description">
               <p>
                 Gain brand authority and visibility with the help of the largest
                 IT service ecosystem. Find customers who are looking for your
@@ -146,13 +163,18 @@
               <span>Signup now</span
               ><img src="./images/Arrow.svg" alt="Arrow" />
             </button>
+            <img
+              class="main__wrapper-content-img"
+              src="./images/Become.svg"
+              alt="Become the vendor everyone wants to buy from"
+            />
           </div>
 
-          <div class="main-content main-three">
-            <div class="main-title">
+          <div class="main__wrapper-content">
+            <div class="main__wrapper-content-title">
               <h3>It’s like having Your best Salesman on autopilot</h3>
             </div>
-            <div class="main-description">
+            <div class="main__wrapper-content-description">
               <p>
                 Share collaterals and documents that are automatically branded.
                 Leverage a rich partner network that sells your solution exactly
@@ -163,21 +185,32 @@
               <span>Signup now</span
               ><img src="./images/Arrow.svg" alt="Arrow" />
             </button>
+            <img
+              class="main__wrapper-content-img"
+              src="./images/Salesman.svg"
+              alt="It’s like having Your best Salesman on autopilot"
+            />
           </div>
 
-          <div class="main-img img-three">
-            <img src="./images/Salesman.svg" alt="salesman" />
+          <div class="main__wrapper-img">
+            <img
+              src="./images/Salesman.svg"
+              alt="It’s like having Your best Salesman on autopilot"
+            />
           </div>
 
-          <div class="main-img img-four">
-            <img src="./images/performance.svg" alt="performance" />
+          <div class="main__wrapper-img">
+            <img
+              src="./images/performance.svg"
+              alt="Track your channel performance"
+            />
           </div>
 
-          <div class="main-content main-four">
-            <div class="main-title">
+          <div class="main__wrapper-content">
+            <div class="main__wrapper-content-title">
               <h3>Track your channel performance</h3>
             </div>
-            <div class="main-description">
+            <div class="main__wrapper-content-description">
               <p>
                 Monitor the health and revenue of your channel program and
                 streamline your campaign to win more customers within Zomentum.
@@ -187,13 +220,18 @@
               <span>Signup now</span
               ><img src="./images/Arrow.svg" alt="Arrow" />
             </button>
+            <img
+              class="main__wrapper-content-img"
+              src="./images/performance.svg"
+              alt="Track your channel performance"
+            />
           </div>
 
-          <div class="main-content main-five">
-            <div class="main-title">
+          <div class="main__wrapper-content">
+            <div class="main__wrapper-content-title">
               <h3>Get The best version of Your sales playbook</h3>
             </div>
-            <div class="main-description">
+            <div class="main__wrapper-content-description">
               <p>
                 Gather insights about top channel sellers and find out what
                 pitch and collaterals ensure maximum profitability. Win happy
@@ -204,17 +242,25 @@
               <span>Signup now</span
               ><img src="./images/Arrow.svg" alt="Arrow" />
             </button>
+            <img
+              class="main__wrapper-content-img"
+              src="./images/playbook.svg"
+              alt="Get The best version of Your sales playbook"
+            />
           </div>
 
-          <div class="main-img img-five">
-            <img src="./images/playbook.svg" alt="playbook" />
+          <div class="main__wrapper-img">
+            <img
+              src="./images/playbook.svg"
+              alt="Get The best version of Your sales playbook"
+            />
           </div>
         </div>
       </main>
 
       <footer>
-        <div class="footer-wrapper">
-          <div class="list-wrapper">
+        <div class="footer__wrapper">
+          <div class="footer__wrapper-lists">
             <ul>
               <li><span>Product</span></li>
               <li><a href="#">Features</a></li>
@@ -248,7 +294,7 @@
               <li><a href="#">Address</a></li>
             </ul>
           </div>
-          <div class="bottom">
+          <div class="footer__wrapper-bottom">
             <span>&copy; 2020 Pactora Inc. All rights reserved.</span>
             <span>Follow us on social</span>
           </div>
