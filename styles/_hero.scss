@@ -55,6 +55,7 @@
       font-weight: lock.$f-weight-seven;
       letter-spacing: lock.$lt-spacing-xs;
       margin-top: 35px;
+      border: none;
     }
   }
 }
@@ -83,7 +84,7 @@
 
 @media (max-width: 899px) {
   .hero {
-    &__bg {
+    &__bg-left {
       img {
         width: 80%;
       }
@@ -91,6 +92,10 @@
 
     &__bg-right {
       right: -70px;
+
+      img {
+        width: 70%;
+      }
     }
 
     h1 {
@@ -103,25 +108,55 @@
   .hero {
     padding: 0 50px 50px 50px;
 
-    h1 {
-      margin-bottom: 0;
-    }
-    button {
-      margin-top: 25px !important;
+    &__wrapper {
+      padding: 0 70px;
+
+      h1 {
+        margin-bottom: 0;
+        font-size: lock.$f-size-m !important;
+      }
+
+      p {
+        font-size: lock.$f-size-s;
+      }
+
+      button {
+        margin-top: 0;
+        font-size: lock.$f-size-xs !important;
+        padding: 8px 15px !important;
+      }
     }
   }
 }
 
-@media (max-width: 699px) {
+@media (max-width: 599px) {
   .hero {
     &__bg {
       img {
-        width: 70% !important;
+        width: 50% !important;
       }
     }
 
     &__bg-right {
-      right: -135px;
+      right: -170px;
+    }
+
+    &__wrapper {
+      padding: 0;
+
+      h1 {
+        font-size: lock.$f-size-s !important;
+      }
+
+      p {
+        font-size: lock.$f-size-tw;
+      }
+
+      button {
+        margin-top: 0;
+        font-size: lock.$f-size-xxs !important;
+        padding: 8px 15px !important;
+      }
     }
   }
 }

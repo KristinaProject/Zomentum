@@ -61,7 +61,8 @@
 @media (max-width: 899px) {
   .subhero {
     &__wrapper {
-      padding-bottom: 50px;
+      padding-bottom: 25px;
+      padding-top: 50px;
 
       &-card {
         flex-basis: 50%;
@@ -76,15 +77,42 @@
         }
       }
 
-      &-card:nth-of-type(4){
+      &-card:nth-of-type(4) {
         flex-basis: 100%;
       }
     }
   }
 }
 
-@media (max-width: 550px) {
-  .subhero__wrapper-card {
-    flex-basis: 100%;
+@media (max-width: 599px) {
+  .subhero__wrapper {
+    gap: 20px;
+
+    &-title {
+      h2 {
+        font-size: lock.$f-size-s;
+      }
+    }
+
+    &-card {
+      flex-basis: 100%;
+
+      &-img {
+        &-bg {
+          padding: 15px;
+
+          img {
+            width: 25px;
+          }
+        }
+      }
+
+      &-content {
+        p {
+          margin-top: 15px !important;
+          font-size: lock.$f-size-tw !important;
+        }
+      }
+    }
   }
 }

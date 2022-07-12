@@ -11,9 +11,11 @@ body * {
   transition: 0.25s ease;
 }
 
+body {
+  margin: 0;
+}
+
 .wrapper {
-  max-width: 1440px;
-  min-width: 450px;
   @include mix.hundred-width;
   margin: 0 auto;
 }

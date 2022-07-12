@@ -99,9 +99,22 @@
     padding: 90px 0 60px 100px !important;
 
     &-lists {
+      row-gap: 20px;
+
       ul {
         flex-basis: 100% !important;
+
+        li {
+          span {
+            margin-bottom: 10px !important;
+          }
+        }
       }
+    }
+
+    &-bottom {
+      margin-top: 10px;
+      font-size: lock.$f-size-tw;
     }
   }
 }

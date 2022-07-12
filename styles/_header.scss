@@ -55,13 +55,19 @@ header {
   header {
     padding: 10px;
 
+    .logo-container {
+      img {
+        width: 150px;
+      }
+    }
+
     .nav-bar {
       display: none;
     }
 
     .hamburger {
       display: block;
-      font-size: 44px;
+      font-size: lock.$f-size-m;
       background-color: lock.$white;
       border: none;
     }

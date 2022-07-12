@@ -46,12 +46,15 @@ header .hamburger {
   header {
     padding: 10px;
   }
+  header .logo-container img {
+    width: 150px;
+  }
   header .nav-bar {
     display: none;
   }
   header .hamburger {
     display: block;
-    font-size: 44px;
+    font-size: 28px;
     background-color: #ffffff;
     border: none;
   }
@@ -107,6 +110,7 @@ header .hamburger {
   font-weight: 700;
   letter-spacing: 0.02em;
   margin-top: 35px;
+  border: none;
 }
 
 @media (max-width: 1279px) {
@@ -126,11 +130,14 @@ header .hamburger {
   }
 }
 @media (max-width: 899px) {
-  .hero__bg img {
+  .hero__bg-left img {
     width: 80%;
   }
   .hero__bg-right {
     right: -70px;
+  }
+  .hero__bg-right img {
+    width: 70%;
   }
   .hero h1 {
     font-size: 36px !important;
@@ -140,19 +147,42 @@ header .hamburger {
   .hero {
     padding: 0 50px 50px 50px;
   }
-  .hero h1 {
-    margin-bottom: 0;
+  .hero__wrapper {
+    padding: 0 70px;
   }
-  .hero button {
-    margin-top: 25px !important;
+  .hero__wrapper h1 {
+    margin-bottom: 0;
+    font-size: 28px !important;
+  }
+  .hero__wrapper p {
+    font-size: 16px;
+  }
+  .hero__wrapper button {
+    margin-top: 0;
+    font-size: 14px !important;
+    padding: 8px 15px !important;
   }
 }
-@media (max-width: 699px) {
+@media (max-width: 599px) {
   .hero__bg img {
-    width: 70% !important;
+    width: 50% !important;
   }
   .hero__bg-right {
-    right: -135px;
+    right: -170px;
+  }
+  .hero__wrapper {
+    padding: 0;
+  }
+  .hero__wrapper h1 {
+    font-size: 16px !important;
+  }
+  .hero__wrapper p {
+    font-size: 12px;
+  }
+  .hero__wrapper button {
+    margin-top: 0;
+    font-size: 10px !important;
+    padding: 8px 15px !important;
   }
 }
 .subhero {
@@ -207,7 +237,8 @@ header .hamburger {
 
 @media (max-width: 899px) {
   .subhero__wrapper {
-    padding-bottom: 50px;
+    padding-bottom: 25px;
+    padding-top: 50px;
   }
   .subhero__wrapper-card {
     flex-basis: 50%;
@@ -224,9 +255,25 @@ header .hamburger {
     flex-basis: 100%;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 599px) {
+  .subhero__wrapper {
+    gap: 20px;
+  }
+  .subhero__wrapper-title h2 {
+    font-size: 16px;
+  }
   .subhero__wrapper-card {
     flex-basis: 100%;
+  }
+  .subhero__wrapper-card-img-bg {
+    padding: 15px;
+  }
+  .subhero__wrapper-card-img-bg img {
+    width: 25px;
+  }
+  .subhero__wrapper-card-content p {
+    margin-top: 15px !important;
+    font-size: 12px !important;
   }
 }
 .main__wrapper {
@@ -235,9 +282,9 @@ header .hamburger {
   grid-template-rows: repeat(5, 1fr);
   padding: 120px 200px 120px 200px;
   gap: 50px;
+  overflow: hidden;
 }
 .main__wrapper-content {
-  max-width: 400px;
   min-width: 200px;
   width: 100%;
   display: flex;
@@ -312,8 +359,8 @@ header .hamburger {
   .main__wrapper-content-img {
     display: block;
     position: absolute;
-    opacity: 0.6;
-    right: -300px;
+    opacity: 0.4;
+    right: -100px;
     z-index: -1;
   }
   .main__wrapper-img {
@@ -322,8 +369,28 @@ header .hamburger {
 }
 @media (max-width: 799px) {
   .main__wrapper-content-img {
-    opacity: 0.4;
-    right: -120px;
+    opacity: 0.2 !important;
+  }
+}
+@media (max-width: 599px) {
+  .main__wrapper {
+    padding: 30px !important;
+    row-gap: 20px !important;
+  }
+  .main__wrapper-content {
+    width: 85%;
+  }
+  .main__wrapper-content-title h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+  .main__wrapper-content-description p {
+    font-size: 12px;
+    margin: 0;
+  }
+  .main__wrapper-content-img {
+    width: 20% !important;
+    right: -60px !important;
   }
 }
 .footer__wrapper {
@@ -409,8 +476,18 @@ header .hamburger {
   .footer__wrapper {
     padding: 90px 0 60px 100px !important;
   }
+  .footer__wrapper-lists {
+    row-gap: 20px;
+  }
   .footer__wrapper-lists ul {
     flex-basis: 100% !important;
+  }
+  .footer__wrapper-lists ul li span {
+    margin-bottom: 10px !important;
+  }
+  .footer__wrapper-bottom {
+    margin-top: 10px;
+    font-size: 12px;
   }
 }
 body * {
@@ -418,9 +495,11 @@ body * {
   transition: 0.25s ease;
 }
 
+body {
+  margin: 0;
+}
+
 .wrapper {
-  max-width: 1440px;
-  min-width: 450px;
   width: 100%;
   margin: 0 auto;
 }
